@@ -1,0 +1,207 @@
+# Get editor completions based on the config schema "$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+format = """
+$os$sudo$directory\
+$all\
+$character
+"""
+
+palette = 'custom'
+
+[palettes.custom]
+mauve = '#c6a0f6'
+
+[character]
+disabled = false
+success_symbol = '[   󰅂 ](bold green)'
+error_symbol = '[   󰅂 ](bold red)'
+
+[cmd_duration]
+disabled = true
+
+[directory]
+disabled = false
+truncation_length = 8
+truncation_symbol = '.../'
+style = 'bold underline mauve'
+read_only = " 󰌾"
+
+[docker_context]
+disabled = false
+format = ' [󰡨 $context ](blue bold)'
+
+[fill]
+disabled = true
+symbol = ' '
+
+[git_branch]
+disabled = false
+truncation_length = 12
+truncation_symbol = '...'
+
+[git_commit]
+disabled = false
+commit_hash_length = 6
+tag_symbol = '🔖 '
+
+[git_state]
+disabled = false
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+
+# [git_status] w
+# disabled = false
+# conflicted = '🆘'
+# ahead = ' [${count}](purple)'
+# behind = ' [${count}](purple)'
+# diverged = '󰃻 ${count}'
+# up_to_date = ''
+# untracked = ' [${count}](pink)'
+# stashed = ' '
+# modified = '󰣪 [$count](yellow)'
+# staged = '[🚀\($count\)](cyan)'
+# renamed = ' [${count}](orange)'
+# deleted = ' [${count}](red)'
+
+[git_status]
+untracked = '[ $count](bold yellow) '
+staged = '[ $count](bold green) '
+stashed = "[ ](cyan) "
+deleted = '[ $count](bold red) '
+modified= '[ $count](bold blue) '
+behind = '[ ](bold purple) '
+ahead = '[ ](bold purple) '
+format = '([$all_status$ahead_behind]($style))'
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = "⌘ "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+detect_folders = []
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[os]
+disabled = false
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
+
+[pijul_channel]
+symbol = "🪺 "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[spack]
+symbol = "🅢 "
+
+[sudo]
+disabled = false
+style = 'bold green'
+symbol = '🔑'
