@@ -1,4 +1,4 @@
-local wezterm = require("wezterm")
+local wezterm = require("wezterm") --[[@as Wezterm]]
 local keys = require("keys")
 
 local M = {}
@@ -15,7 +15,7 @@ function M.setup(config)
     },
     {
       event = { Up = { streak = 1, button = "Left" } },
-      mods = keys.mod,
+      mods = "SUPER",
       action = wezterm.action.CompleteSelectionOrOpenLinkAtMouseCursor("ClipboardAndPrimarySelection"),
     },
   }

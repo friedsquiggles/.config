@@ -24,6 +24,10 @@ export PATH=/bin:$PATH
 export PATH=/usr/sbin:$PATH
 export PATH=/sbin:$PATH
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+source $(brew --prefix nvm)/nvm.sh
+
 # editor
 export EDITOR="nvim"
 export VISUAL="nvim"

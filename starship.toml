@@ -30,7 +30,7 @@ read_only = " 󰌾"
 
 [docker_context]
 disabled = false
-format = ' [󰡨 $context ](blue bold)'
+format = '[󰡨 $context ](blue bold)'
 
 [fill]
 disabled = true
@@ -131,6 +131,7 @@ symbol = "󰆥 "
 symbol = " "
 
 [nodejs]
+version_format = "v${major}"
 symbol = " "
 
 [os]
@@ -178,7 +179,12 @@ Unknown = " "
 Windows = "󰍲 "
 
 [package]
+version_format = "v${major}"
 symbol = "󰏗 "
+
+[php]
+version_format = "v${major}"
+format = '[ $version](147 bold) '
 
 [pijul_channel]
 symbol = "🪺 "

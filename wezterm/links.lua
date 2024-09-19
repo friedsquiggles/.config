@@ -11,6 +11,7 @@ function M.setup(config)
 		{
 			regex = "\\b\\w+://[\\w.-]+\\.[a-z]{2,15}\\S*\\b",
 			format = "$0",
+			highlight = 1,
 		},
 
 		-- linkify email addresses
@@ -18,6 +19,7 @@ function M.setup(config)
 		{
 			regex = [[\b\w+@[\w-]+(\.[\w-]+)+\b]],
 			format = "mailto:$0",
+			highlight = 1,
 		},
 
 		-- file:// URI
@@ -25,6 +27,7 @@ function M.setup(config)
 		{
 			regex = [[\bfile://\S*\b]],
 			format = "$0",
+			highlight = 1,
 		},
 
 		-- Linkify things that look like URLs with numeric addresses as hosts.
@@ -33,6 +36,13 @@ function M.setup(config)
 		{
 			regex = [[\b\w+://(?:[\d]{1,3}\.){3}[\d]{1,3}\S*\b]],
 			format = "$0",
+			highlight = 1,
+		},
+
+		{
+			regex = "\\b\\w+://localhost\\S*\\b",
+			format = "$0",
+			highlight = 1,
 		},
 
 		-- Make username/project paths clickable. This implies paths like the following are for GitHub.
@@ -41,6 +51,7 @@ function M.setup(config)
 		{
 			regex = [[["]?([\w\d]{1}[-\w\d]+)(/){1}([-\w\d\.]+)["]?]],
 			format = "https://www.github.com/$1/$3",
+			highlight = 1,
 		},
 	}
 end

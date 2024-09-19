@@ -4,9 +4,9 @@ local wezterm = require("wezterm") --[[@as Wezterm]]
 local cfg = wezterm.config_builder()
 
 require("tabs").setup(cfg)
-require("mouse").setup(cfg)
+-- require("mouse").setup(cfg)
 require("keys").setup(cfg)
-require("links").setup(cfg)
+-- require("links").setup(cfg)
 -- require("events") -- not in use, but retained for now
 
 -- react to changes
