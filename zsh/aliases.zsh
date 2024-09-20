@@ -67,6 +67,7 @@ else
 fi
 
 # git
+alias g="git"
 alias gs="git status --short --branch"
 alias commit="git commit"
 alias pull="git pull"
@@ -111,12 +112,12 @@ fi
 
 # lazygit
 if [[ -f $(which lazygit) ]]; then
-    alias lzg="lazygit"
+    alias lg="lazygit"
 fi
 
 # lazydocker
 if [[ -f $(which lazydocker) ]]; then
-    alias lzd="lazydocker"
+    alias ld="lazydocker"
 fi
 
 ## util
