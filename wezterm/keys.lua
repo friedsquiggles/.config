@@ -61,11 +61,16 @@ function M.setup(config)
 		{ mods = M.mod, key = "p", action = act.ActivateCommandPalette },
 		{ mods = M.mod, key = "d", action = act.ShowDebugOverlay },
 
+		{ mods = "ALT|SHIFT", key = "H", action = act.AdjustPaneSize({ "Left", 5 }) },
+		{ mods = "ALT|SHIFT", key = "J", action = act.AdjustPaneSize({ "Down", 5 }) },
+		{ mods = "ALT|SHIFT", key = "K", action = act.AdjustPaneSize({ "Up", 5 }) },
+		{ mods = "ALT|SHIFT", key = "L", action = act.AdjustPaneSize({ "Right", 5 }) },
+
 		-- resize current pane -- TODO: fix unresponsive
-		M.split_nav("resize", "CTRL", "LeftArrow", "Right"),
-		M.split_nav("resize", "CTRL", "RightArrow", "Left"),
-		M.split_nav("resize", "CTRL", "UpArrow", "Up"),
-		M.split_nav("resize", "CTRL", "DownArrow", "Down"),
+		-- M.split_nav("resize", "CTRL", "LeftArrow", "Right"),
+		-- M.split_nav("resize", "CTRL", "RightArrow", "Left"),
+		-- M.split_nav("resize", "CTRL", "UpArrow", "Up"),
+		-- M.split_nav("resize", "CTRL", "DownArrow", "Down"),
 
 		-- move cursor to pane
 		M.split_nav("move", "CTRL", "h", "Left"),
@@ -88,7 +93,7 @@ function M.split_nav(resize_or_move, mods, key, dir)
 		else
 			if resize_or_move == "resize" then
 				-- todo: fix, unresponsive
-				win:perform_action( act.AdjustPaneSize { dir, 3 },  pane)
+				win:perform_action(act.AdjustPaneSize({ dir, 3 }), pane)
 			else
 				local panes = pane:tab():panes_with_info()
 				local is_zoomed = false

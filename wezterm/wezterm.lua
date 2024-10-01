@@ -1,13 +1,16 @@
 local wezterm = require("wezterm") --[[@as Wezterm]]
--- local act = wezterm.action
 
 local cfg = wezterm.config_builder()
 
 require("tabs").setup(cfg)
 -- require("mouse").setup(cfg)
 require("keys").setup(cfg)
+
+-- reverting to default link handling for now
 -- require("links").setup(cfg)
--- require("events") -- not in use, but retained for now
+
+-- not in use for now, but retained
+-- require("events")
 
 -- react to changes
 cfg.automatically_reload_config = true
