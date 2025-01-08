@@ -10,7 +10,7 @@ alias cl="clear"
 
 # config
 alias zc='cd ~/.config/'
-alias zv='cd ~/.config/ && nvim'
+alias vc='cd ~/.config/ && nvim'
 
 # dev
 alias zd="cd ~/dev/"
