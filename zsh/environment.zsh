@@ -13,6 +13,9 @@ mkdir -p $ZSH_CACHE
 # tmux
 export ZSH_TMUX_CONFIG="$HOME/.config/tmux/tmux.conf"
 
+# starship
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship.toml"
+
 # homebrew
 export HOMEBREW_NO_ANALYTICS=1
 
@@ -23,6 +26,7 @@ export PATH=/usr/bin:$PATH
 export PATH=/bin:$PATH
 export PATH=/usr/sbin:$PATH
 export PATH=/sbin:$PATH
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -31,6 +35,7 @@ source $(brew --prefix nvm)/nvm.sh
 # editor
 export EDITOR="nvim"
 export VISUAL="nvim"
+export GIT_EDITOR="nvim"
 
 # eza theme
 EZA_COLORS="$(vivid generate catppuccin-frappe)" # default styles

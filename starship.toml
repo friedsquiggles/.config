@@ -1,4 +1,4 @@
-# Get editor completions based on the config schema "$schema" = 'https://starship.rs/config-schema.json'
+"$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = true
 
@@ -15,8 +15,8 @@ mauve = '#c6a0f6'
 
 [character]
 disabled = false
-success_symbol = '[   󰅂 ](bold green)'
-error_symbol = '[   󰅂 ](bold red)'
+success_symbol = '[    󰅂 ](bold green)'
+error_symbol = '[    󰅂 ](bold red)'
 
 [cmd_duration]
 disabled = true
@@ -24,7 +24,7 @@ disabled = true
 [directory]
 disabled = false
 truncation_length = 8
-truncation_symbol = '.../'
+truncation_symbol = ''
 style = 'bold underline mauve'
 read_only = " 󰌾"
 
@@ -38,8 +38,8 @@ symbol = ' '
 
 [git_branch]
 disabled = false
-truncation_length = 12
-truncation_symbol = '...'
+symbol = ''
+format = '[$symbol$branch(:$remote_branch)]($style) '
 
 [git_commit]
 disabled = false
@@ -51,28 +51,14 @@ disabled = false
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
 cherry_pick = '[🍒 PICKING](bold red)'
 
-# [git_status] w
-# disabled = false
-# conflicted = '🆘'
-# ahead = ' [${count}](purple)'
-# behind = ' [${count}](purple)'
-# diverged = '󰃻 ${count}'
-# up_to_date = ''
-# untracked = ' [${count}](pink)'
-# stashed = ' '
-# modified = '󰣪 [$count](yellow)'
-# staged = '[🚀\($count\)](cyan)'
-# renamed = ' [${count}](orange)'
-# deleted = ' [${count}](red)'
-
 [git_status]
-untracked = '[ $count](bold yellow) '
-staged = '[ $count](bold green) '
-stashed = "[ ](cyan) "
-deleted = '[ $count](bold red) '
-modified= '[ $count](bold blue) '
-behind = '[ ](bold purple) '
-ahead = '[ ](bold purple) '
+untracked = '[](bold yellow) '
+staged = '[](bold green) '
+stashed = "[](cyan) "
+deleted = '[](bold red) '
+modified= '[](bold blue) '
+behind = '[](bold purple) '
+ahead = '[](bold purple) '
 format = '([$all_status$ahead_behind]($style))'
 
 [aws]
@@ -84,35 +70,17 @@ symbol = " "
 [c]
 symbol = " "
 
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
-
 [golang]
 symbol = " "
 
 [guix_shell]
 symbol = " "
 
-[haskell]
-symbol = " "
-
-[haxe]
-symbol = "⌘ "
-
 [hg_branch]
 symbol = " "
 
 [hostname]
 ssh_symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
 
 [lua]
 detect_folders = []
@@ -121,18 +89,13 @@ symbol = " "
 [memory_usage]
 symbol = "󰍛 "
 
-[meson]
-symbol = "󰔷 "
-
-[nim]
-symbol = "󰆥 "
-
 [nix_shell]
 symbol = " "
 
 [nodejs]
 version_format = "v${major}"
 symbol = " "
+detect_files = ['package.json', '.node-version', '!deno.json', '!bunfig.toml', '!bun.lockb']
 
 [os]
 disabled = false
@@ -182,30 +145,11 @@ Windows = "󰍲 "
 version_format = "v${major}"
 symbol = "󰏗 "
 
-[php]
-version_format = "v${major}"
-format = '[ $version](147 bold) '
-
-[pijul_channel]
-symbol = "🪺 "
-
 [python]
 symbol = " "
 
-[rlang]
-symbol = "󰟔 "
-
-[ruby]
-symbol = " "
-
 [rust]
 symbol = " "
-
-[scala]
-symbol = " "
-
-[spack]
-symbol = "🅢 "
 
 [sudo]
 disabled = false

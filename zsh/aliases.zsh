@@ -8,6 +8,14 @@ alias v="nvim"
 alias c="clear"
 alias cl="clear"
 
+# config
+alias zc='cd ~/.config/'
+alias vc='cd ~/.config/ && nvim'
+
+# dev
+alias zd="cd ~/dev/"
+alias vd='cd ~/dev/ && nvim'
+
 # navigation
 alias ..='cd ..'
 alias .1='cd ..'
@@ -19,8 +27,6 @@ alias .6='cd ../../../../../..'
 alias .7='cd ../../../../../../..'
 alias .8='cd ../../../../../../../..'
 alias .9='cd ../../../../../../../../..'
-alias dl="cd ~/Downloads && ls"
-alias doc="cd ~/Documents && ls"
 
 # refresh zsh
 alias exz="exec zsh"
@@ -42,21 +48,21 @@ fi
 
 # use eza in place of ls
 if [[ -f $(which eza) ]]; then
-    # files and dirs
+    # files
     alias ls='eza -1 --icons --color=always --group-directories-first'
     alias l='ls'
     alias la='eza -a1 --icons --color=always --group-directories-first'
     ### tree view
     alias lt='eza -T --icons --color=always --git --git-repos --level=3'
-    ### long form - files and dirs
+    ### long form
     alias ll='eza -l --icons --color=always --group-directories-first --git --git-repos --no-user --no-permissions --time-style=relative'
     alias lla='eza -al --icons --color=always --group-directories-first --git --git-repos --no-user --no-permissions --time-style=relative'
-    ### tree view
+    ### tree view long form
     alias llt='eza -lT --icons --color=always --level=3 --git --git-repos --no-user --no-permissions --time-style=relative --total-size'
     alias llta='eza -alT --icons --color=always --level=3 --git --git-repos --no-user --no-permissions --time-style=relative --total-size'
 else
     # use default ls
-    alias l.=' ls -dl'
+    alias l.='ls -dl'
     alias ls='ls'
     alias la='ls -ha'
     alias lt='ls --tree --light'
@@ -69,15 +75,16 @@ fi
 # git
 alias g="git"
 alias gs="git status --short --branch"
+alias gco="git checkout"
+# alias gcom="git checkout main"
+alias gaa="git add --all"
+alias gap="git add --patch"
+
 alias commit="git commit"
 alias pull="git pull"
 alias push="git push"
 alias force="git push --force"
 alias lease="git push --force-with-lease"
-alias gco="git checkout"
-alias gcom="git checkout main"
-alias gaa="git add --all"
-alias gap="git add --patch"
 
 # git log (check home dir gitconfig aliases)
 if [[ -f $(which devmoji) ]]; then
@@ -86,6 +93,7 @@ else
     alias gl="git l"
 fi
 
+# github
 if [[ -f $(which gh) ]]; then
     # github search
     alias ghs="gh search"
@@ -123,5 +131,3 @@ fi
 ## util
 alias generate-passowrd='openssl rand -base64 20'
 
-# php - laravel
-alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'

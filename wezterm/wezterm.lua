@@ -31,8 +31,8 @@ cfg.webgpu_power_preference = "HighPerformance"
 
 -- fonts
 cfg.font = wezterm.font_with_fallback({
+	"CaskaydiaCove Nerd Font",
 	"Cascadia Code PL",
-	"CaskadiaCove NF",
 	"Noto Color Emoji",
 })
 

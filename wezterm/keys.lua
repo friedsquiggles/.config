@@ -29,7 +29,8 @@ function M.setup(config)
 		{ mods = M.mod, key = "t", action = act.SpawnTab("CurrentPaneDomain") },
 
 		-- Splits
-		{ mods = M.mod, key = "Enter", action = M.smart_split },
+		{ mods = M.mod, key = "Enter", action = act.SpawnTab("CurrentPaneDomain")},
+		{ mods = M.mod, key = "Space", action = M.smart_split },
 		{ mods = M.mod, key = "|", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 		{ mods = M.mod, key = "_", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
 
@@ -47,7 +48,6 @@ function M.setup(config)
 
 		-- Clipboard
 		{ mods = M.mod, key = "c", action = act.CopyTo("Clipboard") },
-		{ mods = M.mod, key = "Space", action = act.QuickSelect },
 		{ mods = M.mod, key = "X", action = act.ActivateCopyMode },
 		{ mods = M.mod, key = "f", action = act.Search("CurrentSelectionOrEmptyString") },
 		{ mods = M.mod, key = "v", action = act.PasteFrom("Clipboard") },

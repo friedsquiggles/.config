@@ -8,7 +8,7 @@ source $ZSH_CONFIG/fzfrc.zsh
 
 # dir navigation
 eval "$(zoxide init zsh)"
-alias cd="z"
+alias cd=z
 
 # run custom prompt
 eval "$(starship init zsh)"
